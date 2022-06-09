@@ -41,10 +41,27 @@
         if (shipping)
         {
             total += 40;
-            console.log("Доставка 40");
+            alert(`Сума с доставкой ${total} `);
         }
 
-        console.log("Всего " + total);
+        if ( total <= 500) {
+            alert(`Ваша скидка 0% к оплате  ${total}`);
+        } else if ( total <= 1000) {
+            let discount = total * 0.05;
+            total = total - discount;
+                alert(`Ваша скидка 5% ${discount} к оплате ${total}`);
+        } else  if (total <= 1500) {
+            let discount = total * 0.10;
+            total = total - discount;
+            alert(`Ваша скидка 10% ${discount} к оплате ${total}`);
+        } else {
+            let discount = total * 0.15;
+            total = total - discount;
+            alert(`Ваша скидка 15% ${discount} к оплате ${total - 40} доставка бесплатно`);
+        }
+
+
+
     </script>
 </body>
 

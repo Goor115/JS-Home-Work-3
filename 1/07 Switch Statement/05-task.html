@@ -19,29 +19,15 @@
 
         let adult, specialization, position;
 
-        if (age > 18)
-        {
-            adult = "совершеннолетний";
-        }
-        else
-        {
-            adult = "несовершеннолетний"
-        }
+        adult = age > 18 ? "совершеннолетний" : "несовершеннолетний";
 
-        if (technology == 1)
-        {
-            specialization = "Frontend";
-        }
-        else
-        {
-            specialization = "Backend";
-        }
+        specialization = technology == 1 ? "Frontend" : "Backend";
 
         if (expirience == 0)
         {
             position = "Без опыта работы";
         }
-        else if (expirience > 0 && expirience < 1.5)
+        else if (expirience > 0 && expirience <= 1.5)
         {
             position = "Junior";
         }
@@ -49,7 +35,7 @@
         {
             position = "Middle";
         }
-        else if(expirience > 3)
+        else if(expirience >= 3)
         {
             position = "Senior";
         }
@@ -60,6 +46,7 @@
 
         let result = `Возраст: ${adult}\r\nСпециализация: ${specialization}\r\nПозиция: ${position}`;
         alert(result);
+
     </script>
 </body>
 
