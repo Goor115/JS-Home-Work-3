@@ -22,7 +22,16 @@
         let h = +prompt("Введите высоту цилиндра");
 
         V = Pi * r * r * h;
-        alert(`Объем цилинда с высотой ${h} и радиуосом ${r} = ${V}`);
+        if ( r === 0 || h === 0 ) {
+            alert(`Error 0 !`);
+        } else if (isNaN(r)) {
+            alert(`Error word !`);
+        } else if (isNaN(h)) {
+            alert(`Error word !`);
+        } else {
+            alert(`Объем цилинда с высотой ${h} и радиуосом ${r} = ${V}`);
+        }
+
     </script>
 </body>
 </html>

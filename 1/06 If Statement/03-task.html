@@ -19,6 +19,7 @@
         let productPrice1 = 280.25;
         let productPrice2 = 56;
         let productPrice3 = 12.50;
+        let delivery = 40
 
         let productQuantity1 = prompt(`Укажите количество продуктов '${product1}', цена ${productPrice1}`, 0);
         let productQuantity2 = prompt(`Укажите количество продуктов '${product2}', цена ${productPrice2}`, 0);
@@ -31,10 +32,18 @@
         let totalPriceProduct3 = productPrice3 * productQuantity3; 
 
         let total = totalPriceProduct1 + totalPriceProduct2 + totalPriceProduct3;
+
         console.log(`Общая сумма по продукту '${product1}' составляет ${totalPriceProduct1}`);
         console.log(`Общая сумма по продукту '${product2}' составляет ${totalPriceProduct2}`);
         console.log(`Общая сумма по продукту '${product3}' составляет ${totalPriceProduct3}`);
         console.log("Всего " + total);
+        let basket = confirm(`Общая сумма по продукту '${product1}' составляет ${totalPriceProduct1}\r\nОбщая сумма по продукту '${product2}' составляет ${totalPriceProduct2}\r\nОбщая сумма по продукту '${product3}' составляет ${totalPriceProduct3}\r\nВсего '${total}'\r\nжелаете заказать доставку за '${delivery}'`);
+        if (basket) {
+            alert(`Общая сумма ${total + delivery}`);
+        } else {
+            alert(`Общая сумма ${total}`);
+        }
+
     </script>
 </body>
 </html>
